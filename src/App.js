@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainContainer from './Containers/MainContainer'
+import Banner from './Components/banner'
+import Nav from './Components/nav'
+import { useSelector } from 'react-redux'
 
-function App() {
+const App = () => {
+  const username = useSelector(state => state.userObj.username);
+  const render = username ? ( 
+    <> 
+    <Banner />
+    <Nav />
+    <MainContainer /> 
+    </>) : ( 
+    <> 
+      <Banner />
+      <MainContainer /> 
+    </>)
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {render}
     </div>
-  );
-}
+  )
 
-export default App;
+}
+export default App

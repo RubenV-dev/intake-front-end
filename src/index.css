@@ -5,9 +5,155 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("http://wallpaperstock.net/healthy-diet_wallpapers_53200_1920x1080.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  background: yellow;
+}
+
+.nav a {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  width: 25%;
+  height: 3rem;
+  /* display: inline-grid; */
+  /* margin: 1rem 2rem 2rem; */
+  box-shadow: 0 0 1rem 0 blue;   
+  border-radius: 5px;
+  background-color: black; 
+  border-radius: 25px;
+}
+.banner {
+  background: blue;
+  color: White;
+  font-family: 'Poiret One', cursive;
+  height: 7vmin;
+  font-size: 3rem;
+
+}
+
+.home-choice {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  width: 25%;
+  height: 8rem;
+  display: inline-grid;
+  margin: 1rem 2rem 2rem;
+  box-shadow: 0 0 1rem 0 blue;   
+  background-color: black; 
+  border-radius: 25px;
+}
+
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  width: 100%;
+  padding: 10% 10% 10% 2%;
+  justify-content: center;
+}
+.food-diary li {
+  color: limegreen;
+}
+
+.food-diary {
+  background: black;
+  text-decoration: none;
+}
+
+.food-diary h1{
+  color:white;
+  background: red;
+}
+.newfood {
+  background: yellow;
+}
+.wel-message a {
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  width: 25%;
+  height: 3rem;
+  display: inline-grid;
+  margin: 1rem 2rem 2rem;
+  box-shadow: 0 0 1rem 0 blue;   
+  border-radius: 5px;
+  background-color: black; 
+  border-radius: 25px;
+} 
+
+.sign-in-form {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  width: 28%;
+  height: 9rem;
+  /* display: inline-grid; */
+  /* margin: 1rem 2rem 2rem; */
+  box-shadow: 0 0 1rem 0 blue;   
+  border-radius: 5px;
+  background-color: black; 
+  border-radius: 25px;
+}
+
+.choice-container {
+  background: yellow;
+}
+
+/* .choice-container a {
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  width: 25%;
+  height: 3rem;
+  display: inline-grid;
+  margin: 1rem 2rem 2rem;
+  box-shadow: 0 0 1rem 0 blue;   
+  background-color: black; 
+  border-radius: 25px;
+} */
+
+.home-choice a {
+  text-decoration: none;
+  color: white;
+}
+
+.home-choice:hover {
+  transform: scale(1.1);
+}
+
+.newfood ul{
+  list-style: none;
+}
+
+.newfood li {
+  border: 1px solid green;
+  box-shadow: 0 0 1rem 0 green; 
+  color: white;
+  background: black;
+}
+
+.newfood li:hover {
+  transform: scale(1.1);
 }
