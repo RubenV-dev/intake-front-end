@@ -18,7 +18,7 @@ const myFoods = useSelector(state => state.myFood)
     return (
         <div className="food-diary">
             <h1>My Food Diary</h1>
-            { myFoods.map(food => <FoodItem key={food.id} food={food} handleClick={null} />)}
+            { myFoods.map((food, index) => <FoodItem key={`${food.id}-${index}`} food={food} handleClick={null} />)}
         </div>
     ) 
 }
