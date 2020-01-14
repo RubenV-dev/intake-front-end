@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import userActions from '../redux/actions';
 
 const LoginPage = props => {
     // initializing dispatch
     const dispatch = useDispatch();
+    const userObj = useSelector(state => state.userObj)
     // Setting up local state using the useState hook
     const [loginForm, setLoginForm] = useState({
       username: '',
@@ -15,6 +16,7 @@ const LoginPage = props => {
     const handleSubmit = e => {
       e.preventDefault();
       dispatch(userActions.loginUserToDB(loginForm));
+      dispatch(userActions.getAllFoods())
       props.history.push('/');
     };
   
@@ -27,6 +29,7 @@ const LoginPage = props => {
     // Component code wrap it in a ternary where its conditionally rendered and doesnt show up at all because you are already logged in
     
     return (
+      <div className="login-form">
       <form onSubmit={handleSubmit}>
         <h1>Login Page</h1>
         <input
@@ -45,6 +48,7 @@ const LoginPage = props => {
         />
         <input type="submit" />
       </form>
+      </div>
     );
   };
   

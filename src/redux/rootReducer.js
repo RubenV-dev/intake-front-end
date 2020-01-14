@@ -35,6 +35,11 @@ export default (state = initialState, { type, payload }) => {
             ...state,
             myFood: [...state.myFood, payload]
           }
+          case 'SET_MY_FOOD':
+            return {
+              ...state,
+              myFood: [...state.myFood].concat(payload)
+            }
       default:
         return state;
     }

@@ -112,6 +112,22 @@ const setNewFood = foodObj => ({
   payload: foodObj
 });
 
+const getUserFood = (userObj) => dispatch => {
+  fetch(SPECIFIC_USER_URL(userObj.id))
+    .then(resp => resp.json())
+    .then(userObj => {
+      // debugger;
+      // console.log(userObj)
+      dispatch(setMyFoods(userObj.foods))
+      // console.log(userObj) youor returned json has no foods on it
+    })
+}
+
+const setMyFoods = (foodArr) => ({
+  type: 'SET_MY_FOOD',
+  payload: foodArr
+})
+
 export default {
     newUserToDB,
     deleteUserFromDB,
@@ -121,7 +137,8 @@ export default {
     setFoods,
     getAllFoods,
     persistFood,
-    setNewFood
+    setNewFood,
+    getUserFood
   };
   
   

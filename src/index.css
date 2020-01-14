@@ -115,6 +115,21 @@ code {
   border-radius: 25px;
 }
 
+.login-form {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  width: 28%;
+  height: 9rem;
+  /* display: inline-grid; */
+  /* margin: 1rem 2rem 2rem; */
+  box-shadow: 0 0 1rem 0 blue;   
+  border-radius: 5px;
+  background-color: black; 
+  border-radius: 25px;
+}
+
 .choice-container {
   background: yellow;
 }

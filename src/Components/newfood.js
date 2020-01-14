@@ -28,10 +28,10 @@ const NewFood = props => {
       return newArray
   }
 
-  useEffect(() => {
-    dispatch(userActions.getAllFoods())
-  }, [searchTerm]
-  )
+  // useEffect(() => {
+  //   dispatch(userActions.getAllFoods())
+  // }, [searchTerm]
+  // )
   
     return (
         <div className="newfood">

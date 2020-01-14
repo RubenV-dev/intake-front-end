@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 // import Nav from './nav'
+import { useDispatch } from 'react-redux';
+// import userActions from './redux/actions.js';
 
 const Home = () => {
-    const username = useSelector(state => state.userObj.username);
-    const state = useSelector(state => state)
+    const state = useSelector(state => state);
+    const dispatch = useDispatch();
+    // const state = useSelector(state => state)
+    // useEffect(() => {
+    //     if(localStorage.token) {
+
+    //     dispatch(userActions.getUserFood(userObj))
+    //   }
+    // }, [dispatch]
+    //   )
     console.log(state)
-    const text = username ? (
+    const text = state.userObj.username ? (
         <>
         {/* <Nav /> */}
         <div className="choice-container">
@@ -29,7 +39,7 @@ const Home = () => {
         </>
     ) : ( 
         <div className="wel-message">
-        <strong>"Welcome to Intake. Your one stop Shop for Nutrition and Fitness tracking. If you haven't already, please sign up or sign in now"</strong>
+        <h1>Welcome to Intake. Your one stop Shop for Nutrition and Fitness tracking. If you haven't already, please sign up or sign in now</h1>
         <NavLink to="/signup">Signup</NavLink>
         <NavLink to="/login">Login</NavLink>
         </div>

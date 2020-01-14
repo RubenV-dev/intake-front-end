@@ -1,15 +1,14 @@
 import React from 'react';
 import FoodItem from './food'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 // import userActions from '../redux/actions';
 
 const FoodDiary = props => {
-
 // const dispatch = useDispatch();
-// dispatch(userActions.getAllFoods());
+const foods = useSelector(state => state.userObj.foods)
+// debugger;
 
-const myFoods = useSelector(state => state.myFood)
-  // console.log(state)
+//filter based of id and do fetch to the index
 
   // const handleClick = () => {
   //   console.log("hi")
@@ -18,7 +17,9 @@ const myFoods = useSelector(state => state.myFood)
     return (
         <div className="food-diary">
             <h1>My Food Diary</h1>
-            { myFoods.map((food, index) => <FoodItem key={`${food.id}-${index}`} food={food} handleClick={null} />)}
+            <ol>
+            { foods.map((food, index) => <FoodItem key={`${food.id}-${index}`} food={food} handleClick={null} />)}
+            </ol>
         </div>
     ) 
 }

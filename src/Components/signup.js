@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import userActions from '../redux/actions.js';
 
 const Signup = props => {
     // initializing dispatch
     const dispatch = useDispatch();
+    const userObj = useSelector(state => state.userObj)
   
     // Setting up local state using the useState hook
     const [signupForm, setSignupForm] = useState({
@@ -21,6 +22,8 @@ const Signup = props => {
       e.preventDefault();
       const { history } = props;
       dispatch(userActions.newUserToDB(signupForm));
+      dispatch(userActions.getAllFoods())
+      // dispatch(userActions.getUserFood(userObj))
       history.push('/');
     };
   
