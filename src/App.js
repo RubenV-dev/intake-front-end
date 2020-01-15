@@ -15,7 +15,7 @@ const App = () => {
   
   useEffect(() => {
     if(localStorage.token) {
-      debugger;
+      // debugger;
     dispatch(userActions.persistUser())
     dispatch(userActions.getAllFoods())
   }

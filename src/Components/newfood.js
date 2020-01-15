@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import FoodItem from './food'
 import { useSelector, useDispatch } from 'react-redux'
 import userActions from '../redux/actions'
@@ -27,11 +27,6 @@ const NewFood = props => {
       newArray = searchTerm === "" ? newArray : newArray.filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()))
       return newArray
   }
-
-  // useEffect(() => {
-  //   dispatch(userActions.getAllFoods())
-  // }, [searchTerm]
-  // )
   
     return (
         <div className="newfood">

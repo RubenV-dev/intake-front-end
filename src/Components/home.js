@@ -1,25 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 // import Nav from './nav'
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 // import userActions from './redux/actions.js';
 
 const Home = () => {
     const state = useSelector(state => state);
-    const dispatch = useDispatch();
-    // const state = useSelector(state => state)
-    // useEffect(() => {
-    //     if(localStorage.token) {
-
-    //     dispatch(userActions.getUserFood(userObj))
-    //   }
-    // }, [dispatch]
-    //   )
+    
     console.log(state)
     const text = state.userObj.username ? (
         <>
-        {/* <Nav /> */}
         <div className="choice-container">
         <div className="home-choice">
             <NavLink exact to='/new-food'>Add New Foods</NavLink>

@@ -5,9 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("http://wallpaperstock.net/healthy-diet_wallpapers_53200_1920x1080.jpg");
+  /* background-image: url("https://images.wallpapersden.com/image/download/autumn-season-in-painting_67171_1440x900.jpg"); */
+  /* background-image: url("https://media.giphy.com/media/xT1XGw9YcAQW36LAL6/giphy.gif"); */
+  background-image: url("https://media.giphy.com/media/kSgs8wC7hmqHK/giphy.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   width: 100%;
   height: 100%;
 }
@@ -20,25 +23,26 @@ code {
 .nav {
   display: flex;
   justify-content: space-evenly;
-  background: yellow;
+  /* background: yellow; */
 }
 
 .nav a {
   background-color: black;
-  border: 1px solid white;
+  text-decoration: none;
+  border: 1px solid purple;
   color: white;
   text-align: center;
   width: 25%;
   height: 3rem;
   /* display: inline-grid; */
   /* margin: 1rem 2rem 2rem; */
-  box-shadow: 0 0 1rem 0 blue;   
-  border-radius: 5px;
+  box-shadow: 0 0 1rem 0 purple;   
   background-color: black; 
   border-radius: 25px;
+  padding-top: 1.5em;
 }
 .banner {
-  background: blue;
+  background: purple;
   color: White;
   font-family: 'Poiret One', cursive;
   height: 7vmin;
@@ -48,15 +52,14 @@ code {
 
 .home-choice {
   background-color: black;
-  border: 1px solid white;
+  border: 1px solid purple;
   color: white;
   text-align: center;
   width: 25%;
   height: 8rem;
   display: inline-grid;
   margin: 1rem 2rem 2rem;
-  box-shadow: 0 0 1rem 0 blue;   
-  background-color: black; 
+  box-shadow: 0 0 1rem 0 purple;
   border-radius: 25px;
 }
 
@@ -67,71 +70,120 @@ code {
   width: 100%;
   padding: 10% 10% 10% 2%;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.welcome a {
+  padding-top: 3%;
 }
 .food-diary li {
-  color: limegreen;
+  color: purple;
 }
 
 .food-diary {
-  background: black;
+  background: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 
 .food-diary h1{
   color:white;
-  background: red;
+  background: purple;
 }
+.food-diary li {
+  border: 1px solid purple;
+  box-shadow: 0 0 1rem 0 purple; 
+  color: white;
+  background: black;
+  padding-bottom: 1em;
+  border-radius: 15px;
+  margin: auto;
+  text-align: center;
+}
+
 .newfood {
-  background: yellow;
+  width: 100%;
+}
+.newfood ul{
+  background: rgba(0, 0, 0, 0.5);
+  color:white;
+  padding-inline-start: 0px;
+  width: 50%;
+  margin: auto;
+
+}
+
+.newfood form {
+  display:flex;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+  padding-bottom: 1%;;
 }
 .wel-message a {
   text-decoration: none;
   background-color: black;
-  border: 1px solid white;
+  border: 1px solid purple;
   color: white;
   text-align: center;
   width: 25%;
   height: 3rem;
   display: inline-grid;
   margin: 1rem 2rem 2rem;
-  box-shadow: 0 0 1rem 0 blue;   
+  box-shadow: 0 0 1rem 0 purple;   
   border-radius: 5px;
   background-color: black; 
   border-radius: 25px;
 } 
 
+.wel-message a:hover {
+  transform: scale(1.1);
+}
+
 .sign-in-form {
   background-color: black;
-  border: 1px solid white;
+  border: 1px solid purple;
   color: white;
   text-align: center;
   width: 28%;
   height: 9rem;
-  /* display: inline-grid; */
+  display: inline-grid;
   /* margin: 1rem 2rem 2rem; */
-  box-shadow: 0 0 1rem 0 blue;   
-  border-radius: 5px;
+  box-shadow: 0 0 1rem 0 purple;   
   background-color: black; 
   border-radius: 25px;
+  padding-bottom: 2em;
+}
+
+.sign-in-form form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .login-form {
   background-color: black;
-  border: 1px solid white;
+  border: 1px solid purple;
   color: white;
   text-align: center;
   width: 28%;
   height: 9rem;
-  /* display: inline-grid; */
+  display: inline-grid;
+  /* flex-direction: column ; */
   /* margin: 1rem 2rem 2rem; */
-  box-shadow: 0 0 1rem 0 blue;   
-  border-radius: 5px;
+  box-shadow: 0 0 1rem 0 purple;   
   background-color: black; 
   border-radius: 25px;
+  padding-bottom: 2em;
+}
+
+.login-form form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .choice-container {
-  background: yellow;
+  /* background: yellow; */
 }
 
 /* .choice-container a {
@@ -152,6 +204,7 @@ code {
 .home-choice a {
   text-decoration: none;
   color: white;
+  padding-top: 30%;
 }
 
 .home-choice:hover {
@@ -163,10 +216,14 @@ code {
 }
 
 .newfood li {
-  border: 1px solid green;
-  box-shadow: 0 0 1rem 0 green; 
+  border: 1px solid purple;
+  box-shadow: 0 0 1rem 0 purple; 
   color: white;
   background: black;
+  padding-bottom: 1em;
+  border-radius: 15px;
+  margin: auto;
+  text-align: center;
 }
 
 .newfood li:hover {

@@ -1,11 +1,5 @@
 const initialState = {
-  foods: [
-    {id: 1, name:"billy", type: "vegetable"},
-    {id: 2, name:"sally", type: "vegetable"},
-    {id: 3, name:"mike", type: "vegetable"},
-    {id: 4, name:"henderson", type: "vegetable"},
-    {id: 5, name:"agesd", type: "vegetable"}
-  ],
+  foods: [],
   userObj: {},
   myFood: []
 }
@@ -22,7 +16,8 @@ export default (state = initialState, { type, payload }) => {
       case 'CLEAR_USER':
         return {
           ...state,
-          userObj: {}
+          userObj: {},
+          myFood: {}
         };
       case 'SET_FOODS':
         return {

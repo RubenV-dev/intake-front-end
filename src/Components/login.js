@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import userActions from '../redux/actions';
 
 const LoginPage = props => {
     // initializing dispatch
     const dispatch = useDispatch();
-    const userObj = useSelector(state => state.userObj)
+    // const userObj = useSelector(state => state.userObj)
     // Setting up local state using the useState hook
     const [loginForm, setLoginForm] = useState({
       username: '',
