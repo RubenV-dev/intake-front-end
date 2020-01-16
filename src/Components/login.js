@@ -27,8 +27,10 @@ const LoginPage = props => {
     const { username, password } = loginForm;
   
     // Component code wrap it in a ternary where its conditionally rendered and doesnt show up at all because you are already logged in
-    
+    const token = localStorage.getItem("token")
+    // console.log(token)
     return (
+      !token ? (
       <div className="login-form">
       <form onSubmit={handleSubmit}>
         <h1>Login Page</h1>
@@ -48,7 +50,7 @@ const LoginPage = props => {
         />
         <input type="submit" />
       </form>
-      </div>
+      </div> ) : ( "You are Already Logged in")
     );
   };
   

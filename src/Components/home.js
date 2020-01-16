@@ -7,8 +7,12 @@ import { NavLink } from 'react-router-dom'
 
 const Home = () => {
     const state = useSelector(state => state);
-    
-    console.log(state)
+    const token = () => {
+        return localStorage.getItem('token')
+    }
+
+    console.log(token(), state)
+
     const text = state.userObj.username ? (
         <>
         <div className="choice-container">
@@ -22,7 +26,7 @@ const Home = () => {
             <NavLink exact to='/bmi-calc'>BMI Calculator</NavLink>
         </div>
         <div className="home-choice">
-            <NavLink exact to='/'>My Data Analysis</NavLink>
+            <NavLink exact to='data-analysis'>My Data Analysis</NavLink>
             {/* <NavLink to="/signup">Signup</NavLink>
             <NavLink to="/login">Login</NavLink> */}
         </div>

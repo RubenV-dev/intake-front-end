@@ -23,6 +23,7 @@ const App = () => {
   )
   
   const userObj = useSelector(state => state.userObj);
+  // const token = localStorage.getItem('token')
   const render = userObj.username ? ( 
     <> 
     <Banner />

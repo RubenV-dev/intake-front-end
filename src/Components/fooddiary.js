@@ -2,12 +2,37 @@ import React from 'react';
 import FoodItem from './food'
 import { useSelector } from 'react-redux'
 // import userActions from '../redux/actions';
+// import { useDispatch } from 'react-redux';
 
 const FoodDiary = props => {
 // const dispatch = useDispatch();
+
+// window.onload = () => {
+//   console.log("i have loaded")
+// }
+
+// useEffect(() => {  
+//   debugger;
+//   if(localStorage.token) {
+//     debugger;
+//   dispatch(userActions.persistUser())
+//   // dispatch(userActions.getAllFoods())
+// }
+// }, [dispatch]
+// )
+
+// window.onloadstart = () => {
+//   if (localStorage.token) {
+//   dispatch(userActions.persistUser())
+//   dispatch(userActions.getAllFoods())
+//   }
+// }
+
 const state = useSelector(state => state)
 const myfoods = state.myFood
-console.log(myfoods)
+// debugger;
+// console.log(myfoods)
+// console.log(state)
 
 const renderFoods = () => {
   return (

@@ -53,6 +53,7 @@ const loginUserToDB = userCredentials => dispatch => {
       .then(r => r.json())
       .then(data => {
         dispatch(setUserAction(data.user));
+        // console.log(data.token)
         localStorage.setItem('token', data.token);
       });
 };
@@ -61,7 +62,7 @@ const persistUser = () => dispatch => {
     const config = {
       method: 'GET',
       headers: {
-        Authorization: `bearer ` + localStorage.token
+        Authorization: `bearer ` + localStorage.getItem('token')
       }
     };
     fetch(PERSIST_URL, config)

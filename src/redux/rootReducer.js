@@ -17,7 +17,7 @@ export default (state = initialState, { type, payload }) => {
         return {
           ...state,
           userObj: {},
-          myFood: {}
+          myFood: []
         };
       case 'SET_FOODS':
         return {

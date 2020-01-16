@@ -5,8 +5,9 @@ import userActions from '../redux/actions';
 
 const Nav = () => {
   const dispatch = useDispatch();
-  const handleLogout = () => {
-    dispatch(userActions.logoutUser());
+  const handleLogout = (props) => {
+    dispatch(userActions.logoutUser())
+    // localStorage.clear()
   };
   return (
     <nav className="nav">
