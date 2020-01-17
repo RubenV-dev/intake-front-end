@@ -20,10 +20,18 @@ code {
     monospace;
 }
 
+.graph-container {
+  /* width: 100%; */
+}
+
+.graph {
+  display: inline-block;
+}
+
 .nav {
   display: flex;
   justify-content: space-evenly;
-  /* background: yellow; */
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .nav a {
@@ -33,19 +41,19 @@ code {
   color: white;
   text-align: center;
   width: 25%;
-  height: 3rem;
+  height: 2rem;
   /* display: inline-grid; */
   /* margin: 1rem 2rem 2rem; */
   box-shadow: 0 0 1rem 0 purple;   
   background-color: black; 
   border-radius: 25px;
-  padding-top: 1.5em;
+  padding-top: 1em;
 }
 .banner {
   background: purple;
   color: White;
   font-family: 'Poiret One', cursive;
-  height: 7vmin;
+  /* height: 7vmin; */
   font-size: 3rem;
 
 }
@@ -63,6 +71,37 @@ code {
   border-radius: 25px;
 }
 
+.bmi-render {
+  background-color: black;
+  border: 1px solid purple;
+  color: white;
+  text-align: center;
+  /* width: 25%; */
+  /* height: 8rem; */
+  display: inline-grid;
+  margin: 1rem 2rem 2rem;
+  box-shadow: 0 0 1rem 0 purple;
+  border-radius: 25px;
+}
+
+.bmi-render li {
+  list-style: none;
+}
+
+.macro-info {
+  background-color: black;
+  border: 1px solid purple;
+  color: white;
+  text-align: center;
+  /* width: 25%; */
+  /* height: 8rem; */
+  /* flex-direction: column; */
+  margin: 1rem 2rem 2rem;
+  box-shadow: 0 0 1rem 0 purple;
+  border-radius: 25px;
+  list-style: none;
+}
+
 .welcome {
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +109,7 @@ code {
   width: 100%;
   padding: 10% 10% 10% 2%;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
 }
 
 .welcome a {
@@ -158,6 +197,23 @@ code {
   display: flex;
   flex-direction: column;
   margin: auto;
+}
+
+.bmi-form {
+  background-color: black;
+  border: 1px solid purple;
+  color: white;
+  text-align: center;
+  /* width: 28%; */
+  /* height: 9rem; */
+  /* display: inline-grid; */
+  display: flex;
+  flex-direction: column ;
+  /* margin: 1rem 2rem 2rem; */
+  box-shadow: 0 0 1rem 0 purple;   
+  background-color: black; 
+  border-radius: 25px;
+  padding-bottom: 2em;
 }
 
 .login-form {

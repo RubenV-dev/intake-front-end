@@ -7,11 +7,11 @@ import { NavLink } from 'react-router-dom'
 
 const Home = () => {
     const state = useSelector(state => state);
-    const token = () => {
-        return localStorage.getItem('token')
-    }
+    // const token = () => {
+    //     return localStorage.getItem('token')
+    // }
 
-    console.log(token(), state)
+    // console.log(token(), state)
 
     const text = state.userObj.username ? (
         <>

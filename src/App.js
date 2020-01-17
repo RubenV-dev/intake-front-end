@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import '../node_modules/react-vis/dist/style.css'
 import MainContainer from './Containers/MainContainer'
 import Banner from './Components/banner'
 import Nav from './Components/nav'
@@ -9,9 +10,6 @@ import userActions from './redux/actions.js';
 
 const App = () => {
   const dispatch = useDispatch();
-  //this part is empty and when you persist user on reload it doesnt update this variable
-  
-
   
   useEffect(() => {
     if(localStorage.token) {

@@ -32,7 +32,7 @@ const state = useSelector(state => state)
 const myfoods = state.myFood
 // debugger;
 // console.log(myfoods)
-// console.log(state)
+console.log(state)
 
 const renderFoods = () => {
   return (

@@ -11,6 +11,8 @@ import DataAnalysis from './DataAnalysis'
 
 export default class MainContainer extends React.Component {
   render() {
+    const token = localStorage.getItem("token")
+    console.log(token)
     return (
         <div className="main">
             <Switch>

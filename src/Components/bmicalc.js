@@ -33,37 +33,38 @@ const BmiCalc = props => {
   const { height, weight } = BmiForm;
   
     return (
-        <div className="login-form">
+        <div className="bmi-form">
             <form onSubmit={handleSubmit}>
-        <h1>BMI CALCULATOR</h1>
-        <input
-          type="text"
-          name="height"
-          value={height}
-          onChange={handleChange}
-          placeholder="Enter Height in inches"
-        />
-        <input
-          type="text"
-          name="weight"
-          value={weight}
-          onChange={handleChange}
-          placeholder="Enter Weight in Lbs."
-        />
-        <input type="submit" value="Calculate BMI" />
-      </form>
+                <h1>BMI CALCULATOR</h1>
+                <input
+                  type="text"
+                  name="height"
+                  value={height}
+                  onChange={handleChange}
+                  placeholder="Enter Height in inches"
+                />
+                <input
+                  type="text"
+                  name="weight"
+                  value={weight}
+                  onChange={handleChange}
+                  placeholder="Enter Weight in Lbs."
+                />
+                <input type="submit" value="Calculate BMI" />
+            </form>
+
       {BmiForm.bmi !== 0? 
       <div className="bmi-render">
-      <h3>Your BMI is:</h3>
-      <h3>{BmiForm.bmi}</h3>
-      <strong>
-        BMI DATA INFO
-      </strong>
-      <h4>BMI Categories:</h4>
-        <li>Underweight = {"< 18.5"}</li>
-        <li>Normal weight = 18.5–24.9</li> 
-        <li>Overweight = 25–29.9</li>
-        <li>Obesity = BMI of 30 or greater</li>
+        <h3>Your BMI is:</h3>
+        <h3>{BmiForm.bmi}</h3>
+        <strong>
+          BMI DATA INFO
+        </strong>
+        <h4>BMI Categories:</h4>
+          <li>Underweight = {"< 18.5"}</li>
+          <li>Normal weight = 18.5–24.9</li> 
+          <li>Overweight = 25–29.9</li>
+          <li>Obesity = BMI of 30 or greater</li>
       </div>
       : null 
       }
