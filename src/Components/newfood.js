@@ -46,7 +46,7 @@ const NewFood = props => {
               value={searchTerm}
               onChange={handleChange}
               />
-              <input type="submit" />
+              {/* <input type="submit" /> */}
             </form>
             <ul>
               {renderList().map(food => <FoodItem key={food.id} food={food} handleClick={handleClick} />)}

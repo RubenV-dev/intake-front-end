@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import { useDispatch } from 'react-redux';
 // import userActions from '../redux/actions';
-import {XYPlot, LineSeries, VerticalGridLines, HorizontalGridLines, XAxis, YAxis} from 'react-vis'
+import {XYPlot, LineSeries, HorizontalGridLines, XAxis, YAxis} from 'react-vis'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import userActions from '../redux/actions.js';
@@ -14,7 +14,8 @@ const DataAnalysis= props => {
         calories: 0,
         carbs: 0,
         fat: 0,
-        protein: 0
+        protein: 0,
+        data:[]
     })
 
     useEffect(() => {
@@ -24,7 +25,6 @@ const DataAnalysis= props => {
         getMacroData()
     },[dispatch]
     )
-
     const myFoods = useSelector(state => state.userObj.foods)
 
     const getMacroData = () => {
@@ -32,11 +32,13 @@ const DataAnalysis= props => {
         let totalcarbs = 0
         let totalfat = 0
         let totalprotein = 0
-        myFoods.forEach(food => {
+        let dataArray = []
+        myFoods.forEach((food, index) => {
             totalCal = totalCal += Math.round(Number(food.calories.split("kcal")[0]) * 100) / 100 ;
             totalcarbs = totalcarbs += Math.round(Number(food.carbs.split("g")[0]) * 100) / 100;
             totalfat = totalfat += Math.round(Number(food.fat.split("g")[0]) * 100) / 100;
             totalprotein = totalprotein += Math.round(Number(food.protein.split("g")[0]) * 100) / 100;
+            dataArray.push({x: index , y: (Math.round( totalCal * 100) / 100)})
         })
         totalCal = Math.round( totalCal * 100) / 100
         totalcarbs = Math.round( totalcarbs * 100) / 100 
@@ -47,7 +49,8 @@ const DataAnalysis= props => {
             calories: totalCal,
             carbs: totalcarbs,
             fat: totalfat,
-            protein: totalprotein
+            protein: totalprotein,
+            data: dataArray
         })
     }
 
@@ -74,7 +77,7 @@ const DataAnalysis= props => {
                     <HorizontalGridLines />
                     <XAxis color="white" />
                     <YAxis color="white" />
-                    <LineSeries color="red" data={info} />
+                    <LineSeries color="red" data={dataState.data} />
                 </XYPlot>
             </div>
 

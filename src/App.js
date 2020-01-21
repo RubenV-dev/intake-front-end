@@ -4,13 +4,14 @@ import '../node_modules/react-vis/dist/style.css'
 import MainContainer from './Containers/MainContainer'
 import Banner from './Components/banner'
 import Nav from './Components/nav'
+import Footer from './Components/footer'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import userActions from './redux/actions.js';
 
 const App = () => {
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     if(localStorage.token) {
       // debugger;
@@ -26,10 +27,12 @@ const App = () => {
     <> 
     <Banner />
     <Nav />
-    <MainContainer /> 
+    <MainContainer />
+    <Footer /> 
     </>) : ( 
     <> 
       <Banner />
+      {/* <Nav /> */}
       <MainContainer /> 
     </>)
   return (

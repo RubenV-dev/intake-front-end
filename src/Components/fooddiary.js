@@ -28,22 +28,22 @@ const FoodDiary = props => {
 //   }
 // }
 
-const state = useSelector(state => state)
-const myfoods = state.myFood
+const foods = useSelector(state => state.userObj.foods)
+// const myfoods = state.myFood
 // debugger;
 // console.log(myfoods)
-console.log(state)
+// console.log(state)
 
-const renderFoods = () => {
-  return (
-    state.userObj.foods.concat(myfoods)
-  )
-}
+// const renderFoods = () => {
+//   return (
+//     state.userObj.foods.concat(myfoods)
+//   )
+// }
     return (
         <div className="food-diary">
             <h1>My Food Diary</h1>
             <ol>
-            { renderFoods().map((food, index) => <FoodItem key={`${food.id}-${index}`} food={food} handleClick={null} />)}
+            { foods.map((food, index) => <FoodItem key={`${food.id}-${index}`} food={food} handleClick={null} />)}
             </ol>
         </div>
     ) 

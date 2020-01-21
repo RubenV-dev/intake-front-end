@@ -7,12 +7,11 @@ import Login from '../Components/login'
 import Home from '../Components/home'
 import Bmi from '../Components/bmicalc'
 import DataAnalysis from './DataAnalysis'
+import Workout from '../Components/workout'
 
 
 export default class MainContainer extends React.Component {
   render() {
-    const token = localStorage.getItem("token")
-    console.log(token)
     return (
         <div className="main">
             <Switch>
@@ -23,6 +22,7 @@ export default class MainContainer extends React.Component {
                 <Route path='/signup' component={ Signup } />
                 <Route path='/login' component={ Login } />
                 <Route path='/data-analysis' component={ DataAnalysis } />
+                <Route exact path='/workout' component={ Workout } />
             </Switch>
         </div>
     )

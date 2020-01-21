@@ -30,13 +30,13 @@ export default (state = initialState, { type, payload }) => {
         case 'SET_NEW_FOOD':
           return {
             ...state,
-            myFood: [...state.myFood, payload]
+            userObj: { ...state.userObj, foods: [...state.userObj.foods, payload]}
           }
-          case 'SET_MY_FOOD':
-            return {
-              ...state,
-              myFood: [...state.myFood].concat(payload)
-            }
+          // case 'SET_MY_FOOD':
+          //   return {
+          //     ...state,
+          //     myFood: [...state.myFood].concat(payload)
+          //   }
       default:
         return state;
     }
