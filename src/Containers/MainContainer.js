@@ -8,6 +8,7 @@ import Home from '../Components/home'
 import Bmi from '../Components/bmicalc'
 import DataAnalysis from './DataAnalysis'
 import Workout from '../Components/workout'
+import Help from '../Components/help'
 
 
 export default class MainContainer extends React.Component {
@@ -22,6 +23,7 @@ export default class MainContainer extends React.Component {
                 <Route path='/signup' component={ Signup } />
                 <Route path='/login' component={ Login } />
                 <Route path='/data-analysis' component={ DataAnalysis } />
+                <Route path='/help' component={ Help } />
                 <Route exact path='/workout' component={ Workout } />
             </Switch>
         </div>

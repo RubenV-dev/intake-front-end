@@ -39,11 +39,15 @@ const foods = useSelector(state => state.userObj.foods)
 //     state.userObj.foods.concat(myfoods)
 //   )
 // }
+
+const logFood = (foodObj) => {
+  console.log(foodObj)
+}
     return (
         <div className="food-diary">
             <h1>My Food Diary</h1>
             <ol>
-            { foods.map((food, index) => <FoodItem key={`${food.id}-${index}`} food={food} handleClick={null} />)}
+            { foods.map((food, index) => <FoodItem key={`${food.id}-${index}`} food={food} handleClick={logFood} />)}
             </ol>
         </div>
     ) 

@@ -65,6 +65,20 @@ code {
   border-radius: 25px;
 }
 
+.help {
+  background-color: black;
+  border: 1px solid purple;
+  color: white;
+  text-align: center;
+  /* width: 25%; */
+  /* height: 8rem; */
+  /* display: inline-grid; */
+  margin: 1rem 2rem 2rem;
+  box-shadow: 0 0 1rem 0 purple;
+  border-radius: 25px;
+  font-family: 'Poiret One';
+}
+
 .bmi-render {
   background-color: black;
   border: 1px solid purple;
@@ -92,11 +106,12 @@ code {
 }
 
 .welcome {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   color: white;
   padding: 10% 10% 10% 10%;
   justify-content: center;
+  font-family: 'Poiret One';
 }
 
 .welcome h1 {
@@ -104,10 +119,27 @@ code {
   box-shadow: 0 0 1rem 0 purple; 
   color: white;
   background: black;
-  padding-bottom: 1em;
+  padding-bottom: 2%;
+  padding-top: 2%;
   border-radius: 15px;
   margin: auto;
   text-align: center;
+}
+
+.welcome p {
+  /* border: 1px solid purple; */
+  /* box-shadow: 0 0 1rem 0 purple;  */
+  color: white;
+  background: black;
+  padding-bottom: 1em;
+  /* border-radius: 15px; */
+  margin: auto;
+  /* text-align: center; */
+  padding-top: 1%;
+}
+
+.intro {
+  background: yellow;
 }
 
 .welcome a {
@@ -195,23 +227,25 @@ code {
 }
 
 .sign-in-form {
-  background-color: black;
-  border: 1px solid purple;
-  color: white;
-  text-align: center;
-  width: 28%;
-  height: 9rem;
-  display: inline-grid;
-  box-shadow: 0 0 1rem 0 purple;   
-  background-color: black; 
-  border-radius: 25px;
   padding-bottom: 2em;
+  padding-top: 30%;
+  /* width: 100%; */
 }
 
 .sign-in-form form {
   display: flex;
   flex-direction: column;
   margin: auto;
+  background-color: black;
+  border: 1px solid purple;
+  color: white;
+  text-align: center;
+  /* width: 28%; */
+  /* height: 9rem; */
+  display: inline-grid;
+  box-shadow: 0 0 1rem 0 purple;   
+  background-color: black; 
+  border-radius: 25px;
 }
 
 .bmi-form {
@@ -251,7 +285,7 @@ code {
   border: 1px solid purple;
   color: white;
   text-align: center;
-  width: 28%;
+  /* width: 28%; */
   /* height: 9rem; */
   display: inline-grid;
   box-shadow: 0 0 1rem 0 purple;   
@@ -299,6 +333,7 @@ code {
   width: 100%;
   background-color: purple;
   font-size: .2em;
+  padding-top: 2%;
   /* text-align: center; */
 }
 
@@ -311,8 +346,30 @@ code {
   filter: invert(98%) sepia(39%) saturate(7258%) hue-rotate(282deg) brightness(102%) contrast(102%);
 }
 
-.workout-container p {
+.workout-container li {
+  list-style: none;
+}
+
+.workout-container a {
+  text-decoration: none;
+  background-color: black;
   border: 1px solid purple;
   color: white;
-  background: rgba(0, 0, 0, 0.8)
+  text-align: center;
+  width: 25%;
+  display: inline-grid;
+  margin: 1rem 2rem 2rem;
+  box-shadow: 0 0 1rem 0 purple;
+  border-radius: 25px;
+}
+
+.workout-container a:hover {
+  transform: scale(1.1);
+}
+
+.workout-container h1 {
+  color: white;
+  background-color: black;
+  border: 1px solid purple;
+  box-shadow: 0 0 1rem 0 purple;
 }
