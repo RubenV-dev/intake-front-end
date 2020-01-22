@@ -72,12 +72,10 @@ const DataAnalysis= props => {
         <div className="graph-container">
             <div className="graph">
                 <XYPlot height={350} width={350} style={{backgroundColor: "purple"}} >
-                    <LineSeries color="red" data={info} />
-                    {/* <VerticalGridLines /> */}
                     <HorizontalGridLines />
                     <XAxis color="white" />
                     <YAxis color="white" />
-                    <LineSeries color="red" data={dataState.data} />
+                    <LineSeries color="orange" data={dataState.data} />
                 </XYPlot>
             </div>
 

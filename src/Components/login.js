@@ -13,8 +13,8 @@ const LoginPage = props => {
     });
   
     // controlled form functions
-    const handleSubmit = e => {
-      e.preventDefault();
+    const handleSubmit = () => {
+      // e.preventDefault();
       dispatch(userActions.loginUserToDB(loginForm));
       dispatch(userActions.getAllFoods())
       props.history.push('/');
@@ -32,7 +32,7 @@ const LoginPage = props => {
     return (
       !token ? (
       <div className="login-form">
-      <form onSubmit={handleSubmit}>
+      <form>
         <h1>Login Page</h1>
         <input
           type="text"
@@ -48,8 +48,9 @@ const LoginPage = props => {
           onChange={handleChange}
           placeholder="Password"
         />
-        <input type="submit" />
+        {/* <input type="submit" /> */}
       </form>
+      <li onClick={handleSubmit}>Login Now</li>
       </div> ) : ( "You are Already Logged in")
     );
   };

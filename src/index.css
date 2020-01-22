@@ -230,13 +230,13 @@ code {
   padding-bottom: 2em;
   padding-top: 30%;
   /* width: 100%; */
+  /* width: 10%; */
 }
 
 .sign-in-form form {
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-color: black;
   border: 1px solid purple;
   color: white;
   text-align: center;
@@ -245,9 +245,51 @@ code {
   display: inline-grid;
   box-shadow: 0 0 1rem 0 purple;   
   background-color: black; 
+  /* background: rgba(255,255,255,.2); */
   border-radius: 25px;
 }
 
+.sign-in-form input {
+  padding-bottom: 10%;
+}
+
+.sign-in-form li {
+  color:white;
+  list-style: none;
+  border: 1px solid purple;
+  box-shadow: 0 0 1rem 0 purple; 
+  color: white;
+  background: black;
+  padding-bottom: 1%;
+  border-radius: 15px;
+  margin: auto;
+  text-align: center;
+  padding-top: 1%;
+  width: 20%;
+}
+
+.sign-in-form li:hover {
+  transform: scale(1.1);
+}
+
+.login-form li {
+  color:white;
+  list-style: none;
+  border: 1px solid purple;
+  box-shadow: 0 0 1rem 0 purple; 
+  color: white;
+  background: black;
+  padding-bottom: 1%;
+  border-radius: 15px;
+  margin: auto;
+  text-align: center;
+  padding-top: 1%;
+  width: 20%;
+}
+
+.login-form li:hover {
+  transform: scale(1.1);
+}
 .bmi-form {
   background-color: black;
   border: 1px solid purple;
@@ -262,29 +304,21 @@ code {
 }
 
 .login-form {
-  /* background-color: black;
-  border: 1px solid purple;
-  color: white;
-  text-align: center;
-  width: 28%;
-  height: 9rem;
-  display: inline-grid;
-  box-shadow: 0 0 1rem 0 purple;   
-  background-color: black; 
-  border-radius: 25px;
-  padding-bottom: 2em; */
   padding-top: 30%;
-  /* width: 28%; */
+}
+
+.red-bg {
+  background: red;
 }
 
 .login-form form{
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   margin: auto;
   background-color: black;
   border: 1px solid purple;
   color: white;
-  text-align: center;
+  /* text-align: center; */
   /* width: 28%; */
   /* height: 9rem; */
   display: inline-grid;
@@ -293,25 +327,6 @@ code {
   border-radius: 25px;
   padding-bottom: 2em;
 }
-
-.choice-container {
-  /* background: yellow; */
-}
-
-/* .choice-container a {
-  text-decoration: none;
-  background-color: black;
-  border: 1px solid white;
-  color: white;
-  text-align: center;
-  width: 25%;
-  height: 3rem;
-  display: inline-grid;
-  margin: 1rem 2rem 2rem;
-  box-shadow: 0 0 1rem 0 blue;   
-  background-color: black; 
-  border-radius: 25px;
-} */
 
 .home-choice a {
   text-decoration: none;

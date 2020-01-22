@@ -9,6 +9,7 @@ import Bmi from '../Components/bmicalc'
 import DataAnalysis from './DataAnalysis'
 import Workout from '../Components/workout'
 import Help from '../Components/help'
+import Edit from '../Components/edit'
 
 
 export default class MainContainer extends React.Component {
@@ -25,6 +26,7 @@ export default class MainContainer extends React.Component {
                 <Route path='/data-analysis' component={ DataAnalysis } />
                 <Route path='/help' component={ Help } />
                 <Route exact path='/workout' component={ Workout } />
+                <Route path='/edit' component={ Edit } />
             </Switch>
         </div>
     )

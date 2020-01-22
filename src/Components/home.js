@@ -20,36 +20,18 @@ const Home = () => {
         <p>Current age: {state.userObj.age}</p>
         <p>Gender: {state.userObj.gender}</p>
         <p>Current Weight: {state.userObj.weight}</p>
-        {/* <div className="choice-container">
         <div className="home-choice">
-            <NavLink exact to='/new-food'>Add New Foods</NavLink>
+            <NavLink exact to='/edit'>Edit Profile</NavLink>
         </div>
         <div className="home-choice">
-            <NavLink exact to='/food-diary'>My Food Diary</NavLink>
-        </div>
-        <div className="home-choice">
-            <NavLink exact to='/bmi-calc'>BMI Calculator</NavLink>
-        </div>
-        <div className="home-choice">
-            <NavLink exact to='data-analysis'>My Data Analysis</NavLink>
-        </div>
-        <div className="home-choice">
-            <NavLink exact to='/workout'>Workout</NavLink>
-        </div>
-        </div> */}
-        <div className="home-choice">
-            <NavLink exact to='/new-food'>Edit Profile</NavLink>
+            <NavLink exact to='/help'>Help</NavLink>
         </div>
         <div className="home-choice">
             <NavLink exact to='/new-food'>Party Time</NavLink>
         </div>
         <div className="home-choice">
-            <NavLink exact to='/new-food'>Delete Account</NavLink>
+            <NavLink exact to='/new-food'>Count Steps</NavLink>
         </div>
-        <div className="home-choice">
-            <NavLink exact to='/help'>Help</NavLink>
-        </div>
-        
         </>
     ) : ( 
         <div className="wel-message">

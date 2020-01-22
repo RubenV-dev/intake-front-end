@@ -1,45 +1,43 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import userActions from '../redux/actions.js';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
-const Signup = props => {
-    // initializing dispatch
+const Edit = props => {
     const dispatch = useDispatch();
-    // const userObj = useSelector(state => state.userObj)
-  
-    // Setting up local state using the useState hook
-    const [signupForm, setSignupForm] = useState({
-      username: '',
-      password: '',
-      name: '',
-      age: '',
-      gender: '',
-      weight: ''
-
+    const userObj = useSelector(state => state.userObj)
+    const MySwal = withReactContent(Swal)
+//   let { id, username, name, age, gender, weight } = userObj
+    const [editForm, setEditForm] = useState({
+      id: userObj.id,
+      username: userObj.username,
+      name: userObj.name,
+      age: userObj.age,
+      gender: userObj.gender,
+      weight: userObj.weight
     });
-  
-    // Controlled form functions
+
     const handleChange = e => {
-      setSignupForm({ ...signupForm, [e.target.name]: e.target.value });
+      setEditForm({ ...editForm, [e.target.name]: e.target.value });
     }
   
     const handleSubmit = () => {
       // e.preventDefault();
       const { history } = props;
-      dispatch(userActions.newUserToDB(signupForm));
-      dispatch(userActions.getAllFoods())
+      dispatch(userActions.editUserInDatabase(editForm));
+      MySwal.fire({title: "Your information has been Changed", footer: "Your Profile will now reflect the updated changes" })
+    //   dispatch(userActions.getAllFoods())
       // dispatch(userActions.getUserFood(userObj))
       history.push('/');
     };
   
-    // Destructuring keys from our local state to use in the form
-    const { username, password, name, age, gender, weight } = signupForm;
-  
-    // Component code
+    const { username, name, age, gender, weight } = editForm;
+  console.log(editForm)
     return (
-      <div className = "sign-in-form">
+      <div className = "login-form">
       <form>
-        <h1>Signup Page</h1>
+        <h1>Edit Profile Information</h1>
         <input
           type="text"
           name="username"
@@ -47,13 +45,13 @@ const Signup = props => {
           onChange={handleChange}
           placeholder="Username"
         />
-        <input
+        {/* <input
           type="password"
           name="password"
           value={password}
           onChange={handleChange}
           placeholder="Password"
-        />
+        /> */}
         <input
           type="text"
           name="name"
@@ -84,10 +82,10 @@ const Signup = props => {
         />
         {/* <input type="submit" /> */}
       </form>
-      <li onClick={handleSubmit}>Sign Up Now</li>
+      <li onClick={handleSubmit}>Edit User Info</li>
       </div>
     );
   };
   
-  export default Signup;
+  export default Edit;
 

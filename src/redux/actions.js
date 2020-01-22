@@ -31,6 +31,21 @@ const newUserToDB = userObj => dispatch => {
       });
 };
 
+const editUserInDatabase = userObj => dispatch => {
+  const config = {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userObj)
+  };
+  fetch(SPECIFIC_USER_URL(userObj.id), config)
+      .then(r => r.json())
+      .then(user => {
+        dispatch(setUserAction(user))
+      })
+}
+
 const deleteUserFromDB = userId => dispatch => {
     const config = {
       method: 'DELETE'
@@ -138,7 +153,8 @@ export default {
     setFoods,
     getAllFoods,
     persistFood,
-    setNewFood
+    setNewFood,
+    editUserInDatabase
   };
   
   
