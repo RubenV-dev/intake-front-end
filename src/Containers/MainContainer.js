@@ -10,6 +10,7 @@ import DataAnalysis from './DataAnalysis'
 import Workout from '../Components/workout'
 import Help from '../Components/help'
 import Edit from '../Components/edit'
+import FoodAllergies from '../Components/foodallergies'
 
 
 export default class MainContainer extends React.Component {
@@ -27,6 +28,7 @@ export default class MainContainer extends React.Component {
                 <Route path='/help' component={ Help } />
                 <Route exact path='/workout' component={ Workout } />
                 <Route path='/edit' component={ Edit } />
+                <Route path='/food-allergies' component={ FoodAllergies } />
             </Switch>
         </div>
     )

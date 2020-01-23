@@ -1,9 +1,13 @@
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 const BASE_URL = 'http://localhost:3000';
 const USERS_URL = BASE_URL + '/users';
 const PERSIST_URL = BASE_URL + '/persist';
 const LOGIN_URL = BASE_URL + '/login';
 const FOOD_ENTRY_URL = BASE_URL + '/food_entries'
 const SPECIFIC_USER_URL = id => USERS_URL + '/' + id;
+
+const MySwal = withReactContent(Swal)
 
 const setUserAction = userObj => ({
     type: 'SET_USER',
@@ -25,8 +29,12 @@ const newUserToDB = userObj => dispatch => {
     fetch(USERS_URL, config)
       .then(r => r.json())
       .then(data => {
+        if (!data.errors) {
         dispatch(setUserAction(data.user));
         localStorage.setItem('token', data.token);
+        } else {
+          MySwal.fire({title: "Woops an error occured!", footer: "Please try signing up with a different username" })
+        }
         // console.log(data, localStorage.getItem("token") )
       });
 };
@@ -67,9 +75,16 @@ const loginUserToDB = userCredentials => dispatch => {
     fetch(LOGIN_URL, config)
       .then(r => r.json())
       .then(data => {
-        dispatch(setUserAction(data.user));
-        // console.log(data.token)
-        localStorage.setItem('token', data.token);
+        // console.log(data)
+          if (data.errors) {
+            MySwal.fire({title: "Woops an error occured!", footer: "Please Try again with the correct password" })
+          } else if (data.error) {
+            MySwal.fire({title: "Woops an error occured!", footer: "Please Try logging in with the correct username" })
+          }
+            else {
+              dispatch(setUserAction(data.user));
+              localStorage.setItem('token', data.token);
+          }
       });
 };
   

@@ -3,11 +3,8 @@ import { useDispatch } from 'react-redux';
 import userActions from '../redux/actions.js';
 
 const Signup = props => {
-    // initializing dispatch
     const dispatch = useDispatch();
-    // const userObj = useSelector(state => state.userObj)
   
-    // Setting up local state using the useState hook
     const [signupForm, setSignupForm] = useState({
       username: '',
       password: '',
@@ -18,10 +15,15 @@ const Signup = props => {
 
     });
   
-    // Controlled form functions
     const handleChange = e => {
       setSignupForm({ ...signupForm, [e.target.name]: e.target.value });
     }
+
+    const handleKeyPress = (e) => {
+      if (e.key === "Enter") {
+        handleSubmit()
+      }
+  }
   
     const handleSubmit = () => {
       // e.preventDefault();
@@ -32,50 +34,48 @@ const Signup = props => {
       history.push('/');
     };
   
-    // Destructuring keys from our local state to use in the form
     const { username, password, name, age, gender, weight } = signupForm;
   
-    // Component code
     return (
       <div className = "sign-in-form">
       <form>
         <h1>Signup Page</h1>
-        <input
+        <input onKeyPress={handleKeyPress}
           type="text"
           name="username"
           value={username}
           onChange={handleChange}
           placeholder="Username"
         />
-        <input
+        <input onKeyPress={handleKeyPress}
           type="password"
           name="password"
           value={password}
           onChange={handleChange}
           placeholder="Password"
         />
-        <input
+        <input onKeyPress={handleKeyPress}
           type="text"
           name="name"
           value={name}
           onChange={handleChange}
           placeholder="name"
         />
-        <input
+        <input onKeyPress={handleKeyPress}
           type="text"
           name="age"
           value={age}
           onChange={handleChange}
           placeholder="Age"
         />
-        <input
+        <input onKeyPress={handleKeyPress}
           type="text"
           name="gender"
           value={gender}
           onChange={handleChange}
           placeholder="Gender"
         />
-        <input
+        <input onKeyPress={handleKeyPress}
           type="text"
           name="weight"
           value={weight}

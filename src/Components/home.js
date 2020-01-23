@@ -7,11 +7,11 @@ import { NavLink } from 'react-router-dom'
 
 const Home = () => {
     const state = useSelector(state => state);
-    const token = () => {
-        return localStorage.getItem('token')
-    }
+    // const token = () => {
+    //     return localStorage.getItem('token')
+    // }
 
-    console.log(token(), state)
+    // console.log(token(), state)
 
     const text = state.userObj.username ? (
         <>
@@ -27,10 +27,7 @@ const Home = () => {
             <NavLink exact to='/help'>Help</NavLink>
         </div>
         <div className="home-choice">
-            <NavLink exact to='/new-food'>Party Time</NavLink>
-        </div>
-        <div className="home-choice">
-            <NavLink exact to='/new-food'>Count Steps</NavLink>
+            <NavLink exact to='/food-allergies'>Food Allergy Info</NavLink>
         </div>
         </>
     ) : ( 

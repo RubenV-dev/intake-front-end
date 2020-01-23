@@ -1,6 +1,7 @@
 const initialState = {
   foods: [],
   userObj: {
+    username: "",
     foods: []
   },
   myFood: []

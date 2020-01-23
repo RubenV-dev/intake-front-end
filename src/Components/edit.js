@@ -33,7 +33,7 @@ const Edit = props => {
     };
   
     const { username, name, age, gender, weight } = editForm;
-  console.log(editForm)
+//   console.log(editForm)
     return (
       <div className = "login-form">
       <form>
